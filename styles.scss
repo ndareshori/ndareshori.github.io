@@ -1,0 +1,131 @@
+$color: red;
+$themecolor: #47a84d;
+$titlecolor: #132e0d;
+$bgcolor: #3d704b;
+$fonts: "Comic Sans MS", cursive, sans-serif;
+$fgColor: white;
+
+body {
+    margin: 0; height: 100%;
+    // overflow: hidden
+    background-color: $bgcolor;
+}
+
+#foreground {
+    background-color: $fgColor;
+    margin: 5%;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px;
+    // width: 85%;
+}
+.scrollingBG {
+    style: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgcolor;
+    text-align: center;
+}
+
+.row {
+    // margin-top: 30%;
+  // font-size: 100px;
+  // // text-align: center;
+  // // display: grid;
+  // background-color: $themecolor;
+  // // width: auto;
+  // color: $titlecolor;
+  // display: flex;
+  // flex-wrap: wrap;
+  margin-top: 10px;
+  #icon {
+      // float: left;
+      height: 100px;
+      //
+      // padding-right: 10px;
+      // padding-left: 30px;
+      // width: 25%;
+  }
+  %text {
+      font-family: $fonts;
+      font-weight: bold;
+  }
+
+
+  .buttons {
+      @extend %text;
+      border-radius: 5px;
+      box-shadow: 3px 3px 1px;
+      text-align: center;
+      border: 2px solid black;
+      background: $themecolor;
+      color: $titlecolor;
+      display: inline-block;
+      // padding-left: 50px;
+      // margin-left: 40px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin: 16px;
+      font-size: 15px;
+  }
+
+  #about {
+      padding-left: 16px;
+      padding-right: 16px;
+      //42.64
+      //47
+      // padding-left
+  }
+
+  #privacy {
+      padding-left: 12px;
+      padding-right: 12px;
+      //55
+  }
+
+  #contact {
+      padding-left: 10px;
+      padding-right: 10px;
+      //59
+  }
+
+  // #logoText {
+  //     // letter-spacing: 2px;
+  //     // float: right;
+  //     font-size: 28px;
+  //     @extend %text;
+  //     padding-top: 6px;
+  //
+  // }
+
+
+
+
+
+
+    // @media (min-width: 500px) {
+    //   	body {
+    // 	background-color: red;
+    // 	}
+	// }
+    @media (max-width: 1000px) {
+    	#logo {
+            // margin: auto;
+            // width: 50%;
+    	}
+	}
+
+
+}
+
+#snakeGround {
+    position: relative;
+    width: 100%;
+}
+
+#snake {
+    // position: absolute;
+    height: 4%;
+    width: 12%;
+}

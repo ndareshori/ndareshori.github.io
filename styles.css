@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  height: 100%;
+  background-color: #3d704b;
+}
+
+#foreground {
+  background-color: white;
+  margin: 5%;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 15px;
+}
+
+.scrollingBG {
+  style: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #3d704b;
+  text-align: center;
+}
+
+.row {
+  margin-top: 10px;
+}
+.row #icon {
+  height: 100px;
+}
+.row .buttons {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-weight: bold;
+}
+.row .buttons {
+  border-radius: 5px;
+  box-shadow: 3px 3px 1px;
+  text-align: center;
+  border: 2px solid black;
+  background: #47a84d;
+  color: #132e0d;
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 16px;
+  font-size: 15px;
+}
+.row #about {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.row #privacy {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.row #contact {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#snakeGround {
+  position: relative;
+  width: 100%;
+}
+
+#snake {
+  height: 4%;
+  width: 12%;
+}
+
+/*# sourceMappingURL=styles.css.map */
