@@ -57,13 +57,21 @@ body {
   padding-right: 10px;
 }
 #snakeGround {
-  position: relative;
+  position: absolute;
   width: 100%;
 }
 
-#snake {
-  height: 4%;
-  width: 12%;
+#downloadContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#downloadButton {
+  width: 120px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

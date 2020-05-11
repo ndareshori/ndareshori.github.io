@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script src="moveSnake.js"></script>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- <script>alert('hello');</script> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Snake! Remaster of the classic Snake game</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="styles.css">
-        <script src=”moveSnake.js”></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
     </head>
-    <body>
+    <body style="overflow: hidden;">
+        <!-- <h1 id="counter">0</h1> -->
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-2 col-mid-2 col-sm-4 col-xs-4">
@@ -29,7 +30,12 @@
             </div>
         </div>
         <div id="snakeGround">
-            <img src="images/snake.png" id="snake"></img>
+            <!-- <img src="images/snake.png" id="snake"></img> -->
+        </div>
+        <div id="downloadContainer">
+            <a href=https://apps.apple.com/us/app/snake-classic-snake-enhanced/id1507017428>
+                <img src="images/download.png" alt="Download on the iOS App Store" id="downloadButton">
+            </a>
         </div>
     </body>
 </html>
