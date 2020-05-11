@@ -11,6 +11,46 @@ document.addEventListener('keyup', (e) => {
   }
 });
 
+document.addEventListener('touchstart', handleTouchStart, false);
+document.addEventListener('touchmove', handleTouchMove, false);
+var xDown = null;
+var yDown = null;
+
+function handleTouchStart(evt) {
+    xDown = evt.touches[0].clientX;
+    yDown = evt.touches[0].clientY;
+};
+
+function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+    var xUp = evt.touches[0].clientX;
+    var yUp = evt.touches[0].clientY;
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
+        if ( xDiff > 0 ) {
+            sendSnake();
+        /* left swipe */
+        }
+        // else {
+        // /* right swipe */
+        // }
+     }
+     // else {
+    //     if ( yDiff > 0 ) {
+    //     /* up swipe */
+    //     } else {
+    //     /* down swipe */
+    //     }
+    // }
+    // /* reset values */
+    xDown = null;
+    yDown = null;
+};
+
 
 // let counter = 0;
 // function count() {
@@ -24,7 +64,7 @@ function sendSnake() {
     snake.src = "images/snake.png";
     snake.alt = "snake";
     let addTo = document.getElementById("snakeGround");
-    snake.style.top = ((Math.random() * screen.height - 100) + 120) + "px";
+    snake.style.top = Math.floor((Math.random() * (screen.height - 300))) + "px";
     // addTo.style.top = "20px"
     snake.style.height = '24px';
     snake.style.with = '123px';
