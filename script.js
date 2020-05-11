@@ -1,9 +1,9 @@
 // var keyCode = "";
 //s = 83
 
-//Call sendSnake() every 60 seconds
+//Call sendSnake() every 3 seconds
 document.addEventListener('DOMContentLoaded', () => {
-    setInterval(sendSnake, 60000);
+    setInterval(sendSnake, 3000);
 });
 
 //Call sendSnake() when "s" key is pressed
@@ -17,36 +17,36 @@ document.addEventListener('keyup', (e) => {
 document.addEventListener("touchstart", startTouch, false);
 document.addEventListener("touchmove", moveTouch, false);
 
-var initialX = null;
-var initialY = null;
+var startX = null;
+var startY = null;
 
 function startTouch(e) {
-  initialX = e.touches[0].clientX;
-  initialY = e.touches[0].clientY;
+  startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
 };
 
 function moveTouch(e) {
-  if (initialX === null) {
+  if (startX === null) {
     return;
   }
 
-  if (initialY === null) {
+  if (startY === null) {
     return;
   }
 
   var currentX = e.touches[0].clientX;
   var currentY = e.touches[0].clientY;
 
-  var changeX = initialX - currentX;
-  var changeY = initialY - currentY;
+  var changeX = startX - currentX;
+  var changeY = startY - currentY;
 
   if (Math.abs(changeX) > Math.abs(changeY)) {
     if (changeX < 0) {
       sendSnake();
     }
   }
-  initialX = null;
-  initialY = null;
+  startX = null;
+  startY = null;
 };
 
 
