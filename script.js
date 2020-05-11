@@ -52,11 +52,13 @@ function moveTouch(e) {
 
 
 //Sends a snake across the screen
+
 function sendSnake() {
     let snake = document.createElement("img");
     snake.src = "images/snake.png";
     snake.alt = "snake";
     let addTo = document.getElementById("snakeGround");
+
     snake.style.top = Math.floor((Math.random() * (screen.height - 300))) + "px";
     snake.style.height = '24px';
     snake.style.with = '123px';
@@ -71,11 +73,27 @@ function sendSnake() {
         addTo.removeChild(snake)
     }
 
+
+    snake.addEventListener('click', (event) => {
+      addTo.removeChild(snake);
+      clearInterval(loop);
+      addScore();
+    });
+
     function moveSnake() {
         snake.style.left = pos + "px";
         pos += 2;
     }
 
+}
+
+var score = 0;
+function addScore() {
+    if (score === 0) {
+        document.querySelector('#container').style.visibility = "visible";
+    }
+    score++;
+    document.querySelector('#scoreLabel').innerHTML = "Score: " + score;
 }
 
 //Tracks how many times user has visited site and thanks them on their 100th visit.
