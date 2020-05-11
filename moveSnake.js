@@ -7,14 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('keyup', (e) => {
   if (e.keyCode === 83) {
-      sendSnake()
+      sendSnake();
   }
 });
 
 document.addEventListener("touchstart", startTouch, false);
 document.addEventListener("touchmove", moveTouch, false);
 
-// Swipe Up / Down / Left / Right
 var initialX = null;
 var initialY = null;
 
@@ -35,33 +34,16 @@ function moveTouch(e) {
   var currentX = e.touches[0].clientX;
   var currentY = e.touches[0].clientY;
 
-  var diffX = initialX - currentX;
-  var diffY = initialY - currentY;
+  var changeX = initialX - currentX;
+  var changeY = initialY - currentY;
 
-  if (Math.abs(diffX) > Math.abs(diffY)) {
-    // sliding horizontally
-    if (diffX > 0) {
-      // swiped left
-      alert("swiped left");
-    } else {
-      // swiped right
-      alert("swiped right");
-    }
-  } else {
-    // sliding vertically
-    if (diffY > 0) {
-      // swiped up
-      alert("swiped up");
-    } else {
-      // swiped down
-      alert("swiped down");
+  if (Math.abs(changeX) > Math.abs(changeY)) {
+    if (changeX > 0) {
+      sendSnake();
     }
   }
-
   initialX = null;
   initialY = null;
-
-  e.preventDefault();
 };
 
 
