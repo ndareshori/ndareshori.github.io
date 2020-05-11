@@ -52,6 +52,8 @@ function moveTouch(e) {
 
 
 //Sends a snake across the screen
+var audio = new Audio('sounds/pop.wav');
+
 
 function sendSnake() {
     let snake = document.createElement("img");
@@ -75,6 +77,7 @@ function sendSnake() {
 
 
     snake.addEventListener('click', (event) => {
+      audio.play();
       addTo.removeChild(snake);
       clearInterval(loop);
       addScore();
